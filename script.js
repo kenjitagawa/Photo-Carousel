@@ -36,6 +36,8 @@ window.onload = () => {
     img1.src = `./imgs/img${current + 1}.jpg`; // 1
     img2.src = `./imgs/img${current + 2}.jpg`; // 2
     img3.src = `./imgs/img${current + 3}.jpg`; // 3
+
+    
 }
 
 
@@ -69,17 +71,17 @@ const updateImgs = () => {
     img1.src = `./imgs/img${current + 1}.jpg`; // 1
     img2.src = `./imgs/img${current + 2}.jpg`; // 2
     img3.src = `./imgs/img${current + 3}.jpg`; // 3
+
+    document.getElementById("dateCard1").innerText = randomDate(new Date(2013, 5, 10), new Date());
+    document.getElementById("dateCard2").innerText = randomDate(new Date(2013, 5, 10), new Date());
+    document.getElementById("dateCard3").innerText = randomDate(new Date(2013, 5, 10), new Date());
 }
 
 
 
+function randomDate(start, end) {
+    const date = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
 
-
-
-
-
-
-
-
-
+    return `DATE: ${date.getDay()} / ${date.getMonth()} / ${date.getFullYear()}`;
+  }
 
