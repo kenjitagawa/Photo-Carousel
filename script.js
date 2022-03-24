@@ -33,11 +33,7 @@ span.onclick = () => {
 
 // Load photos
 window.onload = () => {
-    img1.src = `./imgs/img${current + 1}.jpg`; // 1
-    img2.src = `./imgs/img${current + 2}.jpg`; // 2
-    img3.src = `./imgs/img${current + 3}.jpg`; // 3
-
-    
+    updateImgs();
 }
 
 
