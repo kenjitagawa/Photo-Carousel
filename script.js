@@ -31,6 +31,14 @@ span.onclick = () => {
 
 // ==================================================
 
+// Load photos
+window.onload = () => {
+    img1.src = `./imgs/img${current + 1}.jpg`; // 1
+    img2.src = `./imgs/img${current + 2}.jpg`; // 2
+    img3.src = `./imgs/img${current + 3}.jpg`; // 3
+}
+
+
 // Change photos
 
 let nextBtn = document.getElementById("next-btn");
@@ -39,25 +47,29 @@ let prevBtn = document.getElementById("prev-btn");
 current = 0;
 
 nextBtn.addEventListener("click", () => {
-    img1.src = `./imgs/img${current + 1}.jpg`;
-    img2.src = `./imgs/img${current + 2}.jpg`;
-    img3.src = `./imgs/img${current + 3}.jpg`;
-
-    current += 3;
+    if (current != 3)
+    {
+        current += 3;
+        console.log(current);
+        updateImgs();
+    }
 })
 
 
 prevBtn.addEventListener("click", () => {
-    img1.src = `./imgs/img${current - 1}.jpg`;
-    img2.src = `./imgs/img${current - 2}.jpg`;
-    img3.src = `./imgs/img${current - 3}.jpg`;
-
-    
-    current -= 3;
+    if (current != 0)
+    {
+        current -= 3;
+        updateImgs();
+    }
 })
 
 
-
+const updateImgs = () => {
+    img1.src = `./imgs/img${current + 1}.jpg`; // 1
+    img2.src = `./imgs/img${current + 2}.jpg`; // 2
+    img3.src = `./imgs/img${current + 3}.jpg`; // 3
+}
 
 
 
