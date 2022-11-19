@@ -1,6 +1,0 @@
-{
-  "extends": [
-    "github>kenjitagawa/renovate-config"
-  ]
-
-}
